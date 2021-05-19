@@ -11,8 +11,8 @@ console.log("Starting server...");
 createServer({
   port: process.env.PORT,
   basicAuth: {
-    username: "guestadmin",
-    password: "adminguest",
+    username: process.env.BASICAUTH_USERNAME,
+    password: process.env.BASICAUTH_PASSWORD,
   },
   storage: {
     storageMethod: "sql",
